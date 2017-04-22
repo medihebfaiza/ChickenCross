@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Car
+comment0.text=\n\ Write\ a\ description\ of\ class\ Car\ here.\n\ \n\ @author\ (FAIZA\ &\ BENCHRAA)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Car()
+comment1.text=\n\ Creates\ new\ car\ with\ a\ random\ skin\ \n
+comment2.params=s\ d
+comment2.target=Car(int,\ int)
+comment2.text=\n\ Creates\ new\ car\ with\ specific\ speed\ and\ direction\ and\ a\ random\ skin\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ Act\ -\ do\ whatever\ the\ Car\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment4.params=
+comment4.target=void\ run()
+comment4.text=\n\ Advances\ the\ car\ in\ it's\ direction\n\ \n
+comment5.params=
+comment5.target=void\ checkCar()
+comment5.text=\n\ Checks\ if\ the\ car\ is\ out\ of\ the\ world\ and\ resets\ it's\ position\ \n
+numComments=6

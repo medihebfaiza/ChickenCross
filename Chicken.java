@@ -1,0 +1,157 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ * Write a description of class Chicken here.
+ * 
+ * @author (FAIZA & BENCHRAA) 
+ * @version (a version number or a date)
+ */
+public class Chicken extends Player
+{
+    private boolean dead = false ;
+    private boolean blocked = false ;
+    private int score = 0 ;
+    private int inTheAir = 0 ;
+    
+    
+    /**
+     * Act - do whatever the Chicken wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act() 
+    {
+       if (!blocked){
+           if (Greenfoot.isKeyDown("up") ) {
+                setLocation (getX(), getY() - 2);
+                if (isTouching(Obstacle.class)){
+                    setLocation (getX(), getY() + 2);
+                }
+            }
+            if (Greenfoot.isKeyDown("down") ) {
+                setLocation (getX(), getY() + 2); 
+                if (isTouching(Obstacle.class)){
+                    setLocation (getX(), getY() - 2);
+                }
+            }
+            /* Chicken can't go back
+            if (Greenfoot.isKeyDown("left") ) {
+                setLocation (getX() - 2, getY());        
+            }*/
+            
+            if (Greenfoot.isKeyDown("right") ) {
+                setLocation (getX() + 2, getY());  
+                if (isTouching(Obstacle.class)){
+                    setLocation (getX() - 2, getY());
+                }
+                else if (isTouching(Street.class)){
+                    score++ ;
+                }
+            }
+            
+            if (inTheAir >= 20){
+                dead = true ;
+            }
+            
+            else if (inTheAir > 0){
+                getThrown() ;
+            }
+        }
+    }
+    
+    /**
+     * Returns if the chicken is dead
+     */
+    public boolean isDead() {
+        return dead ;
+    }
+    
+    /** 
+     * Checks if the chicken has hit the car  
+    */     
+    public boolean hitByCar()
+    {
+        return isTouching(Car.class) ;
+    }
+    
+    /**
+     * Checks if the player goes out of the world 
+    */
+    public boolean out(){
+        /*int spriteHeight = getImage().getHeight() ;
+        int lookForBorder = (int)(spriteHeight/2) ;
+        */
+        if (getY()<=0 || getY() >= ChickenWorld.height-1) {
+            return true ;
+        }
+        else {
+            return false ;
+        }
+    }
+    
+    /**
+     * Checks if the chicken has reached the end of the world
+     */
+    public boolean reachEnd(){
+        if (getX() >= ChickenWorld.width-1){
+            return true ;
+        }
+        else {
+            return false ;
+        }
+    }
+    
+    /**
+     * 
+     */
+    public void kill(){
+        int randomsound = Greenfoot.getRandomNumber(2) ;
+        if (randomsound == 1){
+            Greenfoot.playSound("chicken01.wav");
+        }
+        else {
+            Greenfoot.playSound("chicken02.wav");
+        }
+        setImage(new GreenfootImage("chick_01_dead2.png"));
+        getThrown() ;
+    }
+    
+    public void block(){
+        blocked = true ;
+    }
+    
+    /**
+     * Plays 
+     */
+    public void getCaught(){
+        int randomsound = Greenfoot.getRandomNumber(2) ;
+        if (randomsound == 1){
+            Greenfoot.playSound("chicken01.wav");
+        }
+        else {
+            Greenfoot.playSound("chicken02.wav");
+        }
+        setImage(new GreenfootImage("chick_01_dead2.png"));
+        turn(-90) ;
+    }
+    
+    /**
+     * Animates the chicken's death
+     */
+    public void getThrown() {
+        if (inTheAir<10){
+            setLocation (getX() -2, getY()+2);
+        }
+        else {
+            setLocation (getX() -2, getY()-2);
+        }
+        turn(5) ;
+        inTheAir++ ;
+    }
+    
+    /**
+     * Returns the Chicken's Score
+     */
+    public int getScore(){
+        return score ;
+    }  
+}

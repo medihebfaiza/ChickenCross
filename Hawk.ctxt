@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Hawk
+comment0.text=\n\ Write\ a\ description\ of\ class\ Hawk\ here.\n\ \n\ @author\ (FAIZA\ &\ BENCHRAA)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=tX\ tY
+comment1.target=Hawk(int,\ int)
+comment1.text=\n\ Creates\ new\ hawk\ with\ a\ given\ target\n
+comment2.params=tX\ tY
+comment2.target=void\ setTarget(int,\ int)
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ Act\ -\ do\ whatever\ the\ Hawk\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment4.params=
+comment4.target=boolean\ targetCaught()
+comment4.text=\n\ Returns\ if\ the\ target\ has\ been\ killed\ \n
+numComments=5

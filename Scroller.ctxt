@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Scroller
+comment0.text=\n\ This\ class\ is\ just\ an\ example.\ You\ can\ delete\ it\ or\ change\ the\ code.\n\ It's\ not\ necessary\ for\ the\ scrolling\ system.\n
+comment1.params=
+comment1.target=Scroller()
+comment2.params=s
+comment2.target=void\ setSpeed(int)
+comment2.text=\n\ Sets\ the\ speed\ of\ the\ Scroller\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ Here\ you\ can\ tell\ your\ actor\ what\ he\ has\ to\ do.\n
+comment4.params=
+comment4.target=void\ stop()
+comment4.text=\n\ Stops\ the\ scroller\n
+numComments=5

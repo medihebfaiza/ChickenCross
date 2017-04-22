@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Street
+comment0.text=\n\ Write\ a\ description\ of\ class\ Street\ here.\n\ \n\ @author\ (FAIZA\ &\ BENCHRAA)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Street()
+comment1.text=\n\ Creates\ a\ one-way\ or\ two-way\ Street\n
+comment2.params=
+comment2.target=boolean\ isTwoWay()
+comment2.text=\n\ Returns\ if\ the\ street\ is\ a\ two-way\ street\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ Act\ -\ do\ whatever\ the\ Street\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=4
